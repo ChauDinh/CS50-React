@@ -24,5 +24,23 @@ In JSX, we can treat html elements as the value like string, function, array, et
 const foo = <h1>Hello, world!</h1>
 ```
 
+In this case, an html code (h1 tag) is assigned as the value of the variable called foo.
+
+* What is ReactDOM?
+
+ReactDOM is going to take care of taking components (we will mention about Component below) that we've created and inserting them into the webpage, particularly the DOM that we want. 
+
+* What is Babel?
+
+We using this package in React development cause most web browsers don't fully support JSX. So we need to translate our codes into vanilla javascript code so that they can understand, Babel is the tool for that action. 
+
+Here are three script for React, ReactDOM and Babel that we'll later
+
+```
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+```
+
 
 
