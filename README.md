@@ -34,7 +34,7 @@ ReactDOM is going to take care of taking components (we will mention about Compo
 
 We using this package in React development cause most web browsers don't fully support JSX. So we need to translate our codes into vanilla javascript code so that they can understand, Babel is the tool for that action. 
 
-Here are three script for React, ReactDOM and Babel that we'll later
+Here are three script for React, ReactDOM and Babel that we'll use later
 
 ```
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -42,5 +42,27 @@ Here are three script for React, ReactDOM and Babel that we'll later
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 ```
 
+* What is Component?
 
+Components come when we think about web applications and devide it into small parts that make it up. For example, navbar components, search components, list components, about components, etc. Here is an example of writing a component in React
+```
+import React, { Component } from "react";
 
+class Hello extends Component {
+ render() {
+  return (
+   <div>
+    <h1>Hello, world!</h1>
+    ...
+   </div>
+  )
+ }
+}
+```
+And then, we want to render the class Hello (in this case, that also mean the text "Hello, world") into the div having an id named "root" of our DOM.
+
+```
+import React, { Component } from "react";
+...
+ReactDOM.render(<Hello />, document.getElementById("root"));
+```
