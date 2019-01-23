@@ -19,7 +19,10 @@ In particular, to achieve that goal, there are number of tools that React is goi
 
 * What is JSX?
 
-In JSX, we can treat html elements as the value like string, function, array, etc. For instance, <code>const foo = <h1>Heelo World!</h1></code>
+In JSX, we can treat html elements as the value like string, function, array, etc. For instance
+```
+const foo = <h1>Hello, world!</h1>
+```
 
 
 
