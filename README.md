@@ -66,3 +66,7 @@ import React, { Component } from "react";
 ...
 ReactDOM.render(<Hello />, document.getElementById("root"));
 ```
+extends Component or extends React.Component is that Hello class is a React Component. 
+Every component is going to need a render() function, describing what the component looks like. In this case it has a "Hello, world!" text at the first line. 
+
+
