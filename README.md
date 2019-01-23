@@ -46,8 +46,6 @@ Here are three script for React, ReactDOM and Babel that we'll use later
 
 Components come when we think about web applications and devide it into small parts that make it up. For example, navbar components, search components, list components, about components, etc. Here is an example of writing a component in React
 ```
-import React, { Component } from "react";
-
 class Hello extends Component {
  render() {
   return (
@@ -62,11 +60,31 @@ class Hello extends Component {
 And then, we want to render the class Hello (in this case, that also mean the text "Hello, world") into the div having an id named "root" of our DOM.
 
 ```
-import React, { Component } from "react";
 ...
 ReactDOM.render(<Hello />, document.getElementById("root"));
 ```
 extends Component or extends React.Component is that Hello class is a React Component. 
 Every component is going to need a render() function, describing what the component looks like. In this case it has a "Hello, world!" text at the first line. 
 
+Another thing that we can do with components is we can nest components with each other. Here is an example:
+
+```
+...
+class Hello extends React.Component {
+ ...
+}
+
+class App extends React.Component {
+ render() {
+  return (
+   <div>
+    <Hello />
+    <Hello />
+   </div>
+  )
+ }
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+```
 
