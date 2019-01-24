@@ -14,11 +14,40 @@
  <script type="text/babel">
   
   class App extends React.Component {
+
+   constructor(props) {
+    super(props);
+    this.state = {
+     tasks: ["thing one", "thing two", "thing three"],
+     input: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.addTask = this.addTask.bind(this);
+   }
+
+   handleChange(e) {
+    this.setState({
+     input: e.target.value
+    });
+   }
+
+   addTask() {
+    this.setState(state => ({ tasks: [...state.tasks, state.input], input: "" }));
+   }
+
    render() {
     return (
      <div>
-      <h1>Todo App</h1> 
+      <h1>Todo Tasks</h1>
+      <ul>
+       {this.state.tasks.map((task, i) => <li key={i}>{task}</li>)} 
+      </ul>
+      <div>
+       <input onChange={this.handleChange} value={this.state.input}/> 
+       <button type="submit" onClick={this.addTask}>Add Task</button> 
+      </div>
      </div>
+     
     )
    }
   }
