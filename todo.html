@@ -4,38 +4,20 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>React Components</title>
+ <title>TodoList</title>
  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
  <div id="root"></div>
-
- <!-- Begin React -->
  <script type="text/babel">
   
-  class Hello extends React.Component {
-
-   handleClick() {
-    alert("Clicked!");
-   }
-
-   render() {
-    return (
-     <div>
-      <h1>Hello, world!</h1>
-      <button onClick={this.handleClick}>Click Me</button>
-     </div>
-    )
-   }
-  }
-
   class App extends React.Component {
    render() {
     return (
      <div>
-      <Hello />
+      <h1>Todo App</h1> 
      </div>
     )
    }
@@ -43,6 +25,5 @@
 
   ReactDOM.render(<App />, document.getElementById("root"));
  </script>
- <!-- End of React -->
 </body>
 </html>
